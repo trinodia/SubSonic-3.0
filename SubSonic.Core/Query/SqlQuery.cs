@@ -601,7 +601,7 @@ namespace SubSonic.Query
             if(toColumn == null)
                 throw new InvalidOperationException("Don't know which column to join to - can't find column " + toColumnName + " in table " + toTable.Name);
 
-            CreateJoin(fromColumn, toColumn, Join.JoinType.Inner);
+            CreateJoin(fromColumn, toColumn, type);
         }
 
         private void CreateJoin<T>(Join.JoinType type)
